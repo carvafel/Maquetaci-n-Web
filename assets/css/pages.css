@@ -1,0 +1,41 @@
+.page-login {
+  /* override de tokens para la página de login */
+  --color-primary: #ea7b77;
+  --color-bg: #fde3e3;
+  --color-surface: #ffeaea;
+  --color-border: #f7caca;
+
+  min-height: 100dvh;
+  background: var(--color-bg);
+  display: grid;
+  place-items: center;
+  padding: var(--space-4);
+}
+
+.auth { width: 100%; max-width: 380px; display: grid; gap: var(--space-4); justify-items: center; }
+.auth__logo { width: clamp(140px, 40vw, 220px); height: auto; user-select: none; }
+.auth__form { width: 100%; display: grid; gap: var(--space-3); align-content: start; }
+.auth__label { font-weight: 600; }
+
+/* Inputs iguales y blancos */
+.auth__form input { width: 100%; }
+.auth__form input[type="text"],
+.auth__form input[type="password"] { background: #ffffff; }
+
+.input-group { position: relative; display: grid; }
+.input-group input { padding-right: 2.25rem; }
+.input-group__btn {
+  position: absolute; right: 0.25rem; top: 50%; transform: translateY(-50%);
+  background: transparent; border: 0; padding: 0.25rem 0.5rem; cursor: pointer; color: #111;
+}
+.input-group__btn svg { width: 18px; height: 18px; display: block; fill: currentColor; }
+.input-group__btn:focus-visible { outline: 2px solid var(--color-primary); border-radius: var(--radius-sm); }
+
+/* Centrado de olvidaste tu contraseña */
+.auth__meta { text-align: center; }
+
+.auth__link { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.auth__submit { width: 7.5rem; margin-inline: auto; background: var(--color-primary); }
+
+/* Pie en negro */
+.auth__foot { text-align: center; color: #111827; margin-top: var(--space-2); }

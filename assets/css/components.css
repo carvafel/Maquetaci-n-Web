@@ -3,10 +3,14 @@
 
 .form { display: grid; gap: var(--space-4); }
 .form__row { display: grid; gap: var(--space-2); }
-input[type="text"], input[type="email"], textarea { padding: 0.6rem 0.8rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius-sm); }
+input[type="text"], input[type="email"], input[type="password"], textarea { padding: 0.6rem 0.8rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius-sm); }
 input:focus-visible, textarea:focus-visible { border-color: var(--color-primary); box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-primary) 25%, transparent); }
 
 .cards-pricing { align-items: stretch; }
 
 /* Estados de tema */
 html[data-theme="dark"] .icon-btn { background: #0f1426; }
+
+/* Brand con imagen */
+.brand__logo--img { width: 28px; height: 28px; object-fit: contain; border-radius: 6px; background: transparent; box-shadow: none; }
+.brand__name { font-weight: 800; }

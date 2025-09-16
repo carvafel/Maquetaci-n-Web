@@ -1,4 +1,4 @@
-(function () {
+  (function () {
   const doc = document.documentElement;
   const navToggle = document.getElementById('navToggle');
   const siteNav = document.getElementById('siteNav');
@@ -24,7 +24,7 @@
     // Cerrar al navegar en móvil
     siteNav.addEventListener('click', (e) => {
       const target = e.target;
-      if (target instanceof HTMLElement && target.tagName === 'A') {
+      if (target instanceof Element && target.tagName === 'A') {
         setNav(false);
       }
     });
@@ -51,4 +51,20 @@
       applyTheme(next);
     });
   }
+
+  // Toggle de visibilidad de contraseña genérico
+  document.addEventListener('click', (e) => {
+    const target = e.target;
+    if (!(target instanceof Element)) return; // admite SVGElement
+    const toggleBtn = target.closest('[data-toggle-password]');
+    if (!toggleBtn) return;
+    const selector = toggleBtn.getAttribute('data-toggle-password');
+    if (!selector) return;
+    const input = document.querySelector(selector);
+    if (!(input instanceof HTMLInputElement)) return;
+    const isPassword = input.type === 'password';
+    input.type = isPassword ? 'text' : 'password';
+    toggleBtn.setAttribute('aria-pressed', String(isPassword));
+    toggleBtn.setAttribute('aria-label', isPassword ? 'Ocultar contraseña' : 'Mostrar contraseña');
+  });
 })();

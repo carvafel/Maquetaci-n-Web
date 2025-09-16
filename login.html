@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UP – Iniciar sesión</title>
+
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/utils.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+
+    <script>
+      document.documentElement.classList.remove('no-js');
+    </script>
+  </head>
+  <body class="page-login">
+    <main class="auth" aria-labelledby="auth-title">
+      <img src="assets/img/logo.png" alt="UP" class="auth__logo" />
+      <h1 id="auth-title" class="sr-only">Iniciar sesión</h1>
+
+      <form class="auth__form" action="#" method="post" novalidate>
+        <label class="auth__label" for="loginUser">Usuario</label>
+        <input id="loginUser" name="user" type="text" autocomplete="username" required />
+
+        <label class="auth__label" for="loginPassword">Contraseña</label>
+        <div class="input-group">
+          <input id="loginPassword" name="password" type="password" autocomplete="current-password" required />
+          <button type="button" class="input-group__btn" aria-label="Mostrar contraseña" aria-pressed="false" data-toggle-password="#loginPassword">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.458 12C3.732 7.943 7.523 5 12 5s8.268 2.943 9.542 7C20.268 16.057 16.478 19 12 19s-8.268-2.943-9.542-7zM12 9a3 3 0 100 6 3 3 0 000-6z"/></svg>
+          </button>
+        </div>
+
+        <div class="auth__meta">
+          <a href="recover.html" class="auth__link">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <button class="btn btn--primary auth__submit" type="submit">Log In</button>
+
+        <p class="auth__foot">¿No tienes cuenta? <a href="#" class="auth__link">Crea una</a></p>
+      </form>
+    </main>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

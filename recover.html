@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UP – Recupera tu contraseña</title>
+
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/utils.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+
+    <script>document.documentElement.classList.remove('no-js');</script>
+  </head>
+  <body class="page-login">
+    <main class="auth" aria-labelledby="recover-title">
+      <img src="assets/img/logo.png" alt="UP" class="auth__logo" />
+      <h1 id="recover-title">Recupera tu contraseña</h1>
+
+      <form class="auth__form" action="#" method="post" novalidate>
+        <label class="auth__label" for="recoverUser">Usuario o correo</label>
+        <input id="recoverUser" name="user" type="text" autocomplete="username email" required />
+
+        <label class="auth__label" for="newPassword">Contraseña nueva</label>
+        <div class="input-group">
+          <input id="newPassword" name="newPassword" type="password" required />
+          <button type="button" class="input-group__btn" aria-label="Mostrar contraseña" aria-pressed="false" data-toggle-password="#newPassword">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.458 12C3.732 7.943 7.523 5 12 5s8.268 2.943 9.542 7C20.268 16.057 16.478 19 12 19s-8.268-2.943-9.542-7zM12 9a3 3 0 100 6 3 3 0 000-6z"/></svg>
+          </button>
+        </div>
+
+        <label class="auth__label" for="confirmPassword">Confirmar contraseña</label>
+        <div class="input-group">
+          <input id="confirmPassword" name="confirmPassword" type="password" required />
+          <button type="button" class="input-group__btn" aria-label="Mostrar contraseña" aria-pressed="false" data-toggle-password="#confirmPassword">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.458 12C3.732 7.943 7.523 5 12 5s8.268 2.943 9.542 7C20.268 16.057 16.478 19 12 19s-8.268-2.943-9.542-7zM12 9a3 3 0 100 6 3 3 0 000-6z"/></svg>
+          </button>
+        </div>
+
+        <button class="btn btn--primary auth__submit" type="submit">Log In</button>
+      </form>
+    </main>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
