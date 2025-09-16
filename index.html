@@ -1,178 +1,26 @@
 <!doctype html>
-<html lang="es" class="no-js">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Mi Aplicación – Maquetación</title>
-    <meta name="description" content="Maquetación frontend accesible y responsive de la aplicación." />
-
-    <link rel="preload" href="assets/css/tokens.css" as="style" />
-    <link rel="preload" href="assets/css/base.css" as="style" />
-    <link rel="preload" href="assets/css/utils.css" as="style" />
-    <link rel="preload" href="assets/css/components.css" as="style" />
-
-    <link rel="stylesheet" href="assets/css/tokens.css" />
-    <link rel="stylesheet" href="assets/css/base.css" />
-    <link rel="stylesheet" href="assets/css/utils.css" />
-    <link rel="stylesheet" href="assets/css/components.css" />
-
+    <title>Redirigiendo…</title>
+    <meta http-equiv="refresh" content="0; url=login.html" />
+    <link rel="canonical" href="login.html" />
     <script>
-      document.documentElement.classList.remove('no-js');
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+      // Fallback JS por si el meta refresh no aplica
+      window.location.replace('login.html');
     </script>
+    <style>
+      html,body{height:100%;margin:0}
+      body{display:grid;place-items:center;font:16px system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
+      .box{max-width:480px;padding:24px;text-align:center;color:#444}
+    </style>
   </head>
   <body>
-    <a class="skip-link" href="#contenido">Saltar al contenido</a>
-
-    <header class="site-header container">
-      <div class="header-inner">
-        <a class="brand" href="index.html" aria-label="Inicio">
-          <img class="brand__logo brand__logo--img" src="assets/img/logo.png" alt="" aria-hidden="true" />
-          <span class="brand__name">UP</span>
-        </a>
-        <button id="navToggle" class="icon-btn" aria-expanded="false" aria-controls="siteNav">
-          <span class="sr-only">Abrir menú</span>
-          ☰
-        </button>
-        <nav id="siteNav" class="site-nav" aria-label="Principal">
-          <ul>
-            <li><a href="#features">Características</a></li>
-            <li><a href="#pricing">Precios</a></li>
-            <li><a href="#about">Nosotros</a></li>
-            <li><a href="#contact">Contacto</a></li>
-          </ul>
-        </nav>
-        <div class="header-actions">
-          <button id="themeToggle" class="icon-btn" aria-pressed="false">
-            <span class="sr-only">Cambiar tema</span>
-            🌗
-          </button>
-          <a class="btn btn--primary" href="login.html">Comenzar</a>
-        </div>
-      </div>
-    </header>
-
-    <main id="contenido">
-      <section class="hero container">
-        <div class="hero__content">
-          <h1>Construye interfaces hermosas, rápidas y accesibles</h1>
-          <p class="lead">Una base de maquetación moderna con buenas prácticas de UX/UI y código mantenible.</p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="login.html">Probar ahora</a>
-            <a class="btn btn--ghost" href="#features">Ver características</a>
-          </div>
-        </div>
-        <div class="hero__media" role="img" aria-label="Ilustración de interfaz moderna"></div>
-      </section>
-
-      <section id="features" class="section container">
-        <header class="section__header">
-          <h2>Características</h2>
-          <p class="muted">Todo lo necesario para empezar bien.</p>
-        </header>
-        <div class="grid grid--3">
-          <article class="card">
-            <h3>Semántico y accesible</h3>
-            <p>Uso de etiquetas correctas, orden de foco y contrastes adecuados.</p>
-          </article>
-          <article class="card">
-            <h3>Responsive primero</h3>
-            <p>Layout fluido, rejillas y utilidades para adaptarse a cualquier pantalla.</p>
-          </article>
-          <article class="card">
-            <h3>Temas claro/oscuro</h3>
-            <p>Preferencia del usuario persistida y respetando `prefers-color-scheme`.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="pricing" class="section container">
-        <header class="section__header">
-          <h2>Precios</h2>
-          <p class="muted">Planes simples para diferentes necesidades.</p>
-        </header>
-        <div class="grid grid--3 cards-pricing">
-          <article class="card price">
-            <h3>Básico</h3>
-            <p class="price__value">$0</p>
-            <ul class="list">
-              <li>Componentes esenciales</li>
-              <li>Actualizaciones básicas</li>
-            </ul>
-            <button class="btn btn--primary">Elegir</button>
-          </article>
-          <article class="card price price--featured">
-            <h3>Pro</h3>
-            <p class="price__value">$9</p>
-            <ul class="list">
-              <li>Todo del Básico</li>
-              <li>Componentes avanzados</li>
-              <li>Soporte prioritario</li>
-            </ul>
-            <button class="btn btn--primary">Elegir</button>
-          </article>
-          <article class="card price">
-            <h3>Equipo</h3>
-            <p class="price__value">$29</p>
-            <ul class="list">
-              <li>Todo del Pro</li>
-              <li>Colaboración</li>
-            </ul>
-            <button class="btn btn--primary">Elegir</button>
-          </article>
-        </div>
-      </section>
-
-      <section id="about" class="section container">
-        <header class="section__header">
-          <h2>Nosotros</h2>
-          <p class="muted">Un equipo obsesionado con la experiencia de usuario.</p>
-        </header>
-        <div class="grid grid--2">
-          <p>Creemos en construir productos que la gente ame usar, con rendimiento y accesibilidad de primera.</p>
-          <p>Nuestra maquetación te ayuda a empezar rápido con una base sólida y escalable.</p>
-        </div>
-      </section>
-
-      <section id="contact" class="section container">
-        <header class="section__header">
-          <h2>Contacto</h2>
-          <p class="muted">¿Listo para empezar? Escríbenos.</p>
-        </header>
-        <form class="form" action="#" method="post" novalidate>
-          <div class="form__row">
-            <label for="name">Nombre</label>
-            <input id="name" name="name" type="text" autocomplete="name" required />
-          </div>
-          <div class="form__row">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required />
-          </div>
-          <div class="form__row">
-            <label for="message">Mensaje</label>
-            <textarea id="message" name="message" rows="4"></textarea>
-          </div>
-          <div class="form__actions">
-            <button class="btn btn--primary" type="submit">Enviar</button>
-          </div>
-        </form>
-      </section>
-    </main>
-
-    <footer class="site-footer container">
-      <div class="footer-inner">
-        <p class="muted">© <span id="year"></span> UP. Todos los derechos reservados.</p>
-        <nav aria-label="Secundaria">
-          <ul class="inline-list">
-            <li><a href="#privacidad">Privacidad</a></li>
-            <li><a href="#terminos">Términos</a></li>
-          </ul>
-        </nav>
-      </div>
-    </footer>
-
-    <script src="assets/js/main.js" defer></script>
+    <div class="box" role="status" aria-live="polite">
+      <p>Redirigiendo a <a href="login.html">login</a>…</p>
+    </div>
   </body>
-</html>
+  </html>
+
+

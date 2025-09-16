@@ -4,7 +4,6 @@ Este repositorio contiene una maquetación frontend moderna, accesible y respons
 
 ## Estructura
 ```
-index.html
 assets/
   css/
     tokens.css      # Design tokens y temas
@@ -17,9 +16,10 @@ assets/
 ```
 
 ## Uso
-- Abre `index.html` en tu navegador.
-- Modo oscuro: botón 🌗 en el header. Se guarda en `localStorage`.
-- Menú móvil: botón ☰ abre/cierra la navegación en pantallas pequeñas.
+- Inicia el servidor local: `npm run dev` (o `npm start`).
+- Abre `http://localhost:3000` (redirige automáticamente a `/login.html`).
+- También puedes acceder directamente a `http://localhost:3000/login.html` y `http://localhost:3000/recover.html`.
+- Para detener el servidor, presiona `CTRL + C` en la terminal.
 
 ## Buenas prácticas incluidas
 - HTML semántico con headers, sections, main, footer y navegación accesible.
@@ -31,7 +31,6 @@ assets/
 
 ## Personalización rápida
 - Cambia paleta en `assets/css/tokens.css`.
-- Añade nuevas secciones duplicando bloques `.section` en `index.html`.
 - Agrega componentes y utilidades en `components.css` y `utils.css`.
 
 ## Licencia
