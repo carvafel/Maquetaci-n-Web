@@ -1,0 +1,14 @@
+.btn { appearance: none; border: 0; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); padding: 0.6rem 1rem; border-radius: var(--radius-sm); font-weight: 600; text-decoration: none; }
+.btn--primary { background: var(--color-primary); color: #fff; }
+.btn--ghost { background: transparent; border: 1px solid var(--color-border); color: inherit; }
+.btn:focus-visible { box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-primary) 30%, transparent); }
+
+.icon-btn { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 0.5rem; }
+
+.card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-4); box-shadow: var(--shadow-sm); }
+
+.list { margin: 0; padding-left: 1.2rem; display: grid; gap: var(--space-2); }
+
+.price { display: grid; gap: var(--space-3); align-content: start; }
+.price__value { font-size: var(--text-3xl); font-weight: 800; }
+.price--featured { border-color: var(--color-primary); box-shadow: 0 0 0 2px color-mix(in oklab, var(--color-primary) 40%, transparent); }
