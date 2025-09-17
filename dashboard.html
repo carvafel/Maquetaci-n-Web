@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UP – Dashboard</title>
+
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/utils.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+
+    <script>
+      document.documentElement.classList.remove('no-js');
+    </script>
+  </head>
+  <body class="page-dashboard">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="dash-topbar container" aria-label="Barra superior">
+      <a class="brand" href="login.html" aria-label="Inicio">
+        <img class="brand__logo brand__logo--img" src="assets/img/logo.png" alt="UP" />
+      </a>
+      <div class="dash-topbar__right">
+        <span class="muted">Bienvenido, Juan</span>
+        <button class="icon-btn icon-btn--img" aria-label="Cuenta">
+          <img src="assets/img/profile.png" alt="" aria-hidden="true" />
+        </button>
+      </div>
+    </header>
+
+    <main id="contenido" class="container dash">
+      <div class="dash__header">
+        <h1>Selecciona una semana</h1>
+        <button class="icon-btn icon-btn--img" aria-label="Seleccionar semana">
+          <img src="assets/img/calendar.png" alt="" aria-hidden="true" />
+        </button>
+      </div>
+
+      <section class="dash__grid">
+        <article class="card dash-card">
+          <header class="dash-card__header">
+            <h2>Historial de siestas</h2>
+            <button class="icon-btn icon-btn--img" aria-label="Descargar historial">
+              <img src="assets/img/download.png" alt="" aria-hidden="true" />
+            </button>
+          </header>
+
+          <div class="table">
+            <div class="table__head">
+              <div>Fecha</div>
+              <div>Duración</div>
+              <div>Calidad</div>
+            </div>
+            <div class="table__row">
+              <div>07/10/2025</div>
+              <div>0h 25min</div>
+              <div>
+                <span class="stars" aria-label="4 de 5">★★★★☆</span>
+              </div>
+            </div>
+            <div class="table__row">
+              <div>27/10/2025</div>
+              <div>0h 15min</div>
+              <div>
+                <span class="stars" aria-label="4 de 5">★★★★☆</span>
+              </div>
+            </div>
+            <div class="table__row">
+              <div>10/11/2025</div>
+              <div>0h 45min</div>
+              <div>
+                <span class="stars" aria-label="4 de 5">★★★★☆</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card dash-card">
+          <header class="dash-card__header">
+            <h2>Tendencia semanal</h2>
+            <button class="icon-btn icon-btn--img" aria-label="Descargar tendencia">
+              <img src="assets/img/download.png" alt="" aria-hidden="true" />
+            </button>
+          </header>
+
+          <div class="chart">
+            <div class="chart__ylabels">
+              <span>40 min.</span>
+              <span>30 min.</span>
+              <span>20 min.</span>
+              <span>10 min.</span>
+            </div>
+            <div class="chart__bars" aria-label="Minutos por día de la semana">
+              <div class="barcol"><div class="bar" style="--h: 65%" aria-label="d: 26 min" title="d: 26 min"></div><span class="xlabel">d</span></div>
+              <div class="barcol"><div class="bar" style="--h: 30%" aria-label="l: 12 min" title="l: 12 min"></div><span class="xlabel">l</span></div>
+              <div class="barcol"><div class="bar" style="--h: 50%" aria-label="m: 20 min" title="m: 20 min"></div><span class="xlabel">m</span></div>
+              <div class="barcol"><div class="bar" style="--h: 85%" aria-label="x: 34 min" title="x: 34 min"></div><span class="xlabel">x</span></div>
+              <div class="barcol"><div class="bar" style="--h: 50%" aria-label="j: 20 min" title="j: 20 min"></div><span class="xlabel">j</span></div>
+              <div class="barcol"><div class="bar" style="--h: 50%" aria-label="v: 20 min" title="v: 20 min"></div><span class="xlabel">v</span></div>
+              <div class="barcol"><div class="bar" style="--h: 75%" aria-label="s: 30 min" title="s: 30 min"></div><span class="xlabel">s</span></div>
+            </div>
+          </div>
+
+          <p class="chart__total"><strong>Tiempo total: 15 horas</strong></p>
+        </article>
+
+        <article class="card dash-card dash-card--full">
+          <h2>Recomendaciones</h2>
+          <p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+  </html>
+
+
