@@ -33,7 +33,8 @@
     <main id="contenido" class="container dash">
       <div class="dash__header">
         <h1>Selecciona una semana</h1>
-        <button class="icon-btn icon-btn--img" aria-label="Seleccionar semana">
+        <span id="selectedWeek" class="dash__selected-week" aria-live="polite"></span>
+        <button class="icon-btn icon-btn--img" aria-label="Seleccionar semana" data-open-datepicker type="button">
           <img src="assets/img/calendar.png" alt="" aria-hidden="true" />
         </button>
       </div>
@@ -112,6 +113,21 @@
         </article>
       </section>
     </main>
+
+    <!-- Overlay + Datepicker modal -->
+    <div class="overlay" data-overlay hidden></div>
+    <div class="datepicker" role="dialog" aria-modal="true" aria-labelledby="dp-title" hidden>
+      <div class="datepicker__header">
+        <button class="icon-btn" data-dp-prev aria-label="Mes anterior">‹</button>
+        <h3 id="dp-title" class="datepicker__title" tabindex="-1">Abril 2025</h3>
+        <button class="icon-btn" data-dp-next aria-label="Mes siguiente">›</button>
+      </div>
+      <div class="datepicker__grid" data-dp-grid aria-label="Calendario"></div>
+      <div class="datepicker__actions">
+        <button class="btn btn--ghost" data-dp-cancel>Cancelar</button>
+        <button class="btn btn--primary" data-dp-apply>Aplicar</button>
+      </div>
+    </div>
 
     <script src="assets/js/main.js" defer></script>
   </body>

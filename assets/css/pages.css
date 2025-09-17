@@ -55,6 +55,8 @@
 .dash { display: grid; gap: var(--space-4); padding: var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
 .dash__header { display: flex; align-items: baseline; justify-content: flex-start; gap: var(--space-3); padding: 0; flex-wrap: wrap; row-gap: var(--space-2); }
 .dash__header h1 { font-size: var(--text-2xl); }
+.dash__selected-week { color: var(--color-text-muted); }
+.dash__header .icon-btn { cursor: pointer; position: relative; z-index: 1; }
 
 .dash__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); }
 .dash-card { background: var(--color-surface); border: 1px solid var(--color-border); }
@@ -85,6 +87,22 @@
 @media (max-width: 1024px) {
   .dash__grid { grid-template-columns: 1fr; }
 }
+
+/* Overlay + Datepicker */
+.overlay[hidden] { display: none !important; }
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.45); backdrop-filter: blur(1px); z-index: 900; }
+
+.datepicker[hidden] { display: none !important; }
+.datepicker { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: min(92vw, 420px); background: #fff; color: #111; border-radius: var(--radius-md); box-shadow: var(--shadow-md); padding: var(--space-4); z-index: 1000; }
+.datepicker__header { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: var(--space-2); margin-bottom: var(--space-3); }
+.datepicker__title { margin: 0; text-align: center; font-weight: 700; }
+.datepicker__grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.25rem; }
+.datepicker__grid button { background: transparent; border: 0; padding: 0.5rem 0.25rem; border-radius: 999px; }
+.datepicker__grid button[aria-current="date"] { background: #efefef; }
+.datepicker__grid button.is-today { outline: 2px solid var(--color-primary); }
+.datepicker__grid button.is-selected { background: var(--color-primary); color: #fff; }
+.datepicker__dow { color: var(--color-text-muted); font-size: var(--text-sm); text-transform: uppercase; letter-spacing: .03em; text-align: center; }
+.datepicker__actions { display: flex; justify-content: flex-end; gap: var(--space-2); margin-top: var(--space-3); }
 
 @media (max-width: 640px) {
   h1 { font-size: var(--text-3xl); }
