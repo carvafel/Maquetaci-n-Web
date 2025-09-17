@@ -122,6 +122,22 @@
   nextBtn?.addEventListener('click', () => { current.setMonth(current.getMonth() + 1); renderCalendar(current); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDp(); });
 
+  // Modal de descarga
+  const downloadBtns = document.querySelectorAll('[data-download-btn]');
+  const downloadModal = document.querySelector('[data-download-modal]');
+  const dlAccept = document.querySelector('[data-dl-accept]');
+  function openDownloadModal() {
+    if (!downloadModal) return;
+    downloadModal.hidden = false;
+  }
+  function closeDownloadModal() {
+    if (!downloadModal) return;
+    downloadModal.hidden = true;
+  }
+  downloadBtns.forEach((b) => b.addEventListener('click', openDownloadModal));
+  dlAccept?.addEventListener('click', closeDownloadModal);
+  downloadModal?.addEventListener('click', (e) => { if (e.target === downloadModal) closeDownloadModal(); });
+
   // Toggle de tema claro/oscuro con persistencia
   if (themeToggle) {
     function applyTheme(theme) {

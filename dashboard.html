@@ -43,7 +43,7 @@
         <article class="card dash-card">
           <header class="dash-card__header">
             <h2>Historial de siestas</h2>
-            <button class="icon-btn icon-btn--img" aria-label="Descargar historial">
+            <button class="icon-btn icon-btn--img" aria-label="Descargar historial" data-download-btn>
               <img src="assets/img/download.png" alt="" aria-hidden="true" />
             </button>
           </header>
@@ -81,7 +81,7 @@
         <article class="card dash-card">
           <header class="dash-card__header">
             <h2>Tendencia semanal</h2>
-            <button class="icon-btn icon-btn--img" aria-label="Descargar tendencia">
+            <button class="icon-btn icon-btn--img" aria-label="Descargar tendencia" data-download-btn>
               <img src="assets/img/download.png" alt="" aria-hidden="true" />
             </button>
           </header>
@@ -126,6 +126,17 @@
       <div class="datepicker__actions">
         <button class="btn btn--ghost" data-dp-cancel>Cancelar</button>
         <button class="btn btn--primary" data-dp-apply>Aplicar</button>
+      </div>
+    </div>
+
+    <!-- Modal de descarga exitosa -->
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="dl-title" hidden data-download-modal>
+      <div class="modal__content">
+        <div class="modal__icon" aria-hidden="true"><img src="assets/img/checked.png" alt="" /></div>
+        <h3 id="dl-title" class="modal__title">El reporte se ha<br/>descargado exitosamente</h3>
+        <div class="modal__actions">
+          <button class="btn btn--primary" type="button" data-dl-accept>Aceptar</button>
+        </div>
       </div>
     </div>
 
