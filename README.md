@@ -16,6 +16,7 @@ assets/
 ```
 
 ## Uso
+- ejecutar `npm install` en la raiz del proyecto
 - Inicia el servidor local: `npm run dev` (o `npm start`).
 - Abre `http://localhost:3000` (redirige automáticamente a `/login.html`).
 - También puedes acceder directamente a `http://localhost:3000/login.html` y `http://localhost:3000/recover.html`.
