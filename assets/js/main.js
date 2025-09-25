@@ -175,4 +175,32 @@
     toggleBtn.setAttribute('aria-pressed', String(isPassword));
     toggleBtn.setAttribute('aria-label', isPassword ? 'Ocultar contraseña' : 'Mostrar contraseña');
   });
+
+  // Navegación simulada en formularios (sin backend)
+  const loginUserInput = document.getElementById('loginUser');
+  if (loginUserInput) {
+    const form = loginUserInput.closest('form');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      window.location.href = 'dashboard.html';
+    });
+  }
+
+  const recoverUserInput = document.getElementById('recoverUser');
+  if (recoverUserInput) {
+    const form = recoverUserInput.closest('form');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      window.location.href = 'login.html';
+    });
+  }
+
+  const signupEmailInput = document.getElementById('signupEmail');
+  if (signupEmailInput) {
+    const form = signupEmailInput.closest('form');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      window.location.href = 'dashboard.html';
+    });
+  }
 })();

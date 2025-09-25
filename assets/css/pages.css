@@ -20,7 +20,8 @@
 /* Inputs iguales y blancos */
 .auth__form input { width: 100%; }
 .auth__form input[type="text"],
-.auth__form input[type="password"] { background: #ffffff; }
+.auth__form input[type="password"],
+.auth__form input[type="email"] { background: #ffffff; }
 
 .input-group { position: relative; display: grid; }
 .input-group input { padding-right: 2.25rem; }
