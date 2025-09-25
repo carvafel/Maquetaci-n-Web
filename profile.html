@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UP – Perfil</title>
+
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/utils.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+
+    <script>
+      document.documentElement.classList.remove('no-js');
+    </script>
+  </head>
+  <body class="page-profile">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="dash-topbar container" aria-label="Barra superior">
+      <a class="brand" href="dashboard.html" aria-label="Ir al dashboard">
+        <img class="brand__logo brand__logo--img" src="assets/img/logo.png" alt="UP" />
+      </a>
+      <div class="dash-topbar__right">
+        <a class="btn btn--ghost" href="dashboard.html">Volver al dashboard</a>
+      </div>
+    </header>
+
+    <main id="contenido" class="container profile" aria-labelledby="profile-title">
+      <h1 id="profile-title" class="sr-only">Perfil de usuario</h1>
+
+      <section class="profile__header" aria-label="Información de la cuenta">
+        <img class="profile__avatar" src="assets/img/profilepicture.png" alt="Foto de perfil de Juan Gil" />
+        <div class="profile__info">
+          <p class="profile__name">Juan Gil</p>
+          <p class="profile__email">jgil@gmail.com</p>
+        </div>
+      </section>
+
+      <section class="profile__card" aria-label="Acciones de la cuenta">
+        <button class="profile__action" type="button">Ajustes privacidad</button>
+        <button class="profile__action" type="button">Cambiar contraseña</button>
+      </section>
+    </main>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+  </html>
+
+

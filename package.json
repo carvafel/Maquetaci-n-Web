@@ -1,0 +1,14 @@
+{
+  "name": "maquetaci-n-web",
+  "version": "1.0.0",
+  "description": "Este repositorio contiene una maquetación frontend moderna, accesible y responsive sin backend.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node -e \"console.log('Local: http://localhost:3000')\" && npx --yes http-server -p 3000 -a localhost -c-1 --silent .",
+    "start": "node -e \"console.log('Local: http://localhost:3000')\" && npx --yes http-server -p 3000 -a localhost -c-1 --silent ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
